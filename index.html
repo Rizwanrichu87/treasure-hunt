@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Treasure Hunt</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .qr-info {
+      font-size: 0.85rem; 
+      color: #ccc; 
+      background: rgba(0,0,0,0.4); 
+      padding: 15px; 
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+    .qr-info code {
+      background: #333;
+      padding: 3px 6px;
+      border-radius: 4px;
+      color: #ffca28;
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Background Elements -->
+  <div class="background-animations">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+
+  <div class="container">
+    <div class="tekron-brand">TEKRON</div>
+    <h1 class="title-main">Treasure Hunt</h1>
+    
+    <div class="instruction-box">
+      <h3>Welcome Hunters!</h3>
+      <p style="margin-top: 10px;">Select your assigned team below to test the game flow. During the actual event, players should scan QR codes placed at physical locations.</p>
+    </div>
+
+    <h2>Select Your Team (Demo)</h2>
+    <div class="team-grid">
+      <button class="team-btn red" onclick="location.href='stage1.html?team=red'">Team Red</button>
+      <button class="team-btn blue" onclick="location.href='stage1.html?team=blue'">Team Blue</button>
+      <button class="team-btn green" onclick="location.href='stage1.html?team=green'">Team Green</button>
+      <button class="team-btn yellow" onclick="location.href='stage1.html?team=yellow'">Team Yellow</button>
+      <button class="team-btn purple" onclick="location.href='stage1.html?team=purple'">Team Purple</button>
+      <button class="team-btn orange" onclick="location.href='stage1.html?team=orange'">Team Orange</button>
+    </div>
+
+    <div class="qr-info">
+      <h3>Admin Setup Notes</h3>
+      <p style="margin-top: 10px; margin-bottom: 5px;"><strong>🎮 Configure Game:</strong> Edit <code>js/config.js</code> to set passcodes and clues.</p>
+      <p style="margin-bottom: 5px;"><strong>🖼️ Images:</strong> Place your puzzle images in <code>images/puzzles/</code> matching the pattern <code>stage1-red.jpg</code>, <code>stage2-blue.jpg</code></p>
+      <p style="margin-bottom: 5px;"><strong>📱 Generate QR Codes:</strong> Generate QR codes leading to the stage URLs for each team.</p>
+      <p>Example: <code>https://YOUR_SITE/stage1.html?team=red</code></p>
+    </div>
+
+  </div>
+</body>
+</html>
