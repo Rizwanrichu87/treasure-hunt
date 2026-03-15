@@ -1,8 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Parsing Parameters
   const urlParams = new URLSearchParams(window.location.search);
-  const team = urlParams.get('team') || 'red';
   
+  // Get stage from URL
+  const path = window.location.pathname;
+  let team = urlParams.get('team') || 'red';
+  let stage = 1;
+
+  if (typeof stageMappings !== 'undefined') {
+    const match = Object.keys(stageMappings).find(key => stageMappings[key] === path.split('/').pop());
+    if (match) {
+        stage = parseInt(match.match(/stage(\d+)/)[1]);
+        team = match.replace(/stage\d+/, '');
+    }
+  }
+
   // Set team color
   const colors = {
     red: '#ff4b4b',
@@ -17,17 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.style.setProperty('--active-color', colors[team]);
   }
 
-  // Get stage from URL
-  const path = window.location.pathname;
-  let stage = 1; // default fallback
-  const match = path.match(/stage(\d+)\.html/i);
-  if (match) {
-    stage = parseInt(match[1]);
-  }
-
   const stageTitleEl = document.getElementById('stage-title');
   if (!stageTitleEl) return; // Not a stage page (e.g., index)
   
+    
   stageTitleEl.textContent = `Stage ${stage} - Team ${team.charAt(0).toUpperCase() + team.slice(1)}`;
 
   // PUZZLE LOGIC
@@ -191,3 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+
+
