@@ -143,9 +143,22 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('passcode-section').classList.remove('hidden');
         document.getElementById('instruction-text').innerHTML = "<strong>Puzzle Solved!</strong><br>Enter the location passcode.";
         document.getElementById('instruction-text').style.color = "var(--team-green)";
+        const mapArea = document.getElementById('map-area');
+        if (mapArea) mapArea.classList.remove('hidden');
       }, 600);
     }
   }
+
+  window.skipPuzzle = function() {
+    if (isSolved) return;
+    isSolved = true;
+    puzzleContainer.classList.add('hidden');
+    document.getElementById('passcode-section').classList.remove('hidden');
+    document.getElementById('instruction-text').innerHTML = "<strong>Puzzle Skipped (Dev Mode)!</strong><br>Enter the location passcode.";
+    document.getElementById('instruction-text').style.color = "var(--team-green)";
+    const mapArea = document.getElementById('map-area');
+    if (mapArea) mapArea.classList.remove('hidden');
+  };
 
   initPuzzle();
 

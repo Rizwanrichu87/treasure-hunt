@@ -11,41 +11,41 @@ const GAME_CONFIG = {
   locationClues: {
     "Library": "A silent world filled with endless stories,\nWhere knowledge sleeps on dusty shelves.\nSeek the place where readers explore.",
     "Staircase": "Step by step you climb or fall,\nConnecting every floor and hall.",
-    "Computer Lab": "Screens glow bright and keyboards click,\nLogic and code solved quick.",
-    "Auditorium": "Voices echo and lights shine bright,\nA place where performances take flight.",
+    "ATM": "Cash flows where cards are swiped,\nA machine that serves both day and night.\nFind the place where money speaks.",
+    "Fountain": "Water dances in a gentle flow,\nA peaceful spot where cool winds blow.\nFind the place where droplets rise and fall.",
     "Mechanical Workshop": "Metal, gears and machines that roar,\nEngineers shaping ideas at the core.",
     "Football Turf": "Green ground where goals are scored,\nCheers rise high with every reward.",
-    "Administrative Block": "Papers signed and decisions made,\nThe center of rules that must be obeyed.",
+    "Security Cabin": "Eyes that watch both day and night,\nGuarding the campus with silent might.\nFind the place where safety stands.",
     "Parking Area": "Rows of wheels patiently stay,\nWaiting for journeys at the end of the day.",
     "Main Gate": "Every story begins right here,\nThe gateway that welcomes all.",
-    "NSS Office": "The journey ends where service leads,\nFind the place where volunteers plant good deeds."
+    "Notice Boards": "Messages pinned for all to see,\nNews and updates for you and me.\nFind the place where announcements live."
   },
 
   // Team routing tables (Stage -> Location)
   routes: {
     "red": {
-      1: "Library", 2: "Staircase", 3: "Computer Lab", 4: "Auditorium", 5: "Mechanical Workshop",
-      6: "Football Turf", 7: "Administrative Block", 8: "Parking Area", 9: "Main Gate", 10: "NSS Office"
+      1: "Library", 2: "Staircase", 3: "ATM", 4: "Fountain", 5: "Mechanical Workshop",
+      6: "Football Turf", 7: "Security Cabin", 8: "Parking Area", 9: "Main Gate", 10: "Notice Boards"
     },
     "blue": {
-      1: "Staircase", 2: "Computer Lab", 3: "Auditorium", 4: "Mechanical Workshop", 5: "Football Turf",
-      6: "Library", 7: "Parking Area", 8: "Main Gate", 9: "NSS Office", 10: "Administrative Block"
+      1: "Staircase", 2: "ATM", 3: "Fountain", 4: "Mechanical Workshop", 5: "Football Turf",
+      6: "Library", 7: "Parking Area", 8: "Main Gate", 9: "Notice Boards", 10: "Security Cabin"
     },
     "green": {
-      1: "Computer Lab", 2: "Auditorium", 3: "Mechanical Workshop", 4: "Football Turf", 5: "Library",
-      6: "Staircase", 7: "Main Gate", 8: "NSS Office", 9: "Administrative Block", 10: "Parking Area"
+      1: "ATM", 2: "Fountain", 3: "Mechanical Workshop", 4: "Football Turf", 5: "Library",
+      6: "Staircase", 7: "Main Gate", 8: "Notice Boards", 9: "Security Cabin", 10: "Parking Area"
     },
     "yellow": {
-      1: "Auditorium", 2: "Mechanical Workshop", 3: "Football Turf", 4: "Library", 5: "Staircase",
-      6: "Computer Lab", 7: "NSS Office", 8: "Administrative Block", 9: "Parking Area", 10: "Main Gate"
+      1: "Fountain", 2: "Mechanical Workshop", 3: "Football Turf", 4: "Library", 5: "Staircase",
+      6: "ATM", 7: "Notice Boards", 8: "Security Cabin", 9: "Parking Area", 10: "Main Gate"
     },
     "purple": {
-      1: "Mechanical Workshop", 2: "Football Turf", 3: "Library", 4: "Staircase", 5: "Computer Lab",
-      6: "Auditorium", 7: "Administrative Block", 8: "Parking Area", 9: "Main Gate", 10: "NSS Office"
+      1: "Mechanical Workshop", 2: "Football Turf", 3: "Library", 4: "Staircase", 5: "ATM",
+      6: "Fountain", 7: "Security Cabin", 8: "Parking Area", 9: "Main Gate", 10: "Notice Boards"
     },
     "orange": {
-      1: "Football Turf", 2: "Library", 3: "Staircase", 4: "Computer Lab", 5: "Auditorium",
-      6: "Mechanical Workshop", 7: "Parking Area", 8: "Main Gate", 9: "NSS Office", 10: "Administrative Block"
+      1: "Football Turf", 2: "Library", 3: "Staircase", 4: "ATM", 5: "Fountain",
+      6: "Mechanical Workshop", 7: "Parking Area", 8: "Main Gate", 9: "Notice Boards", 10: "Security Cabin"
     }
   },
 
