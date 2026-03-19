@@ -16,7 +16,7 @@ const GAME_CONFIG = {
     "Mechanical Workshop": "Metal, gears and machines that roar,\nEngineers shaping ideas at the core.",
     "Football Turf": "Green ground where goals are scored,\nCheers rise high with every reward.",
     "Security Cabin": "Eyes that watch both day and night,\nGuarding the campus with silent might.\nFind the place where safety stands.",
-    "Parking Area": "Rows of wheels patiently stay,\nWaiting for journeys at the end of the day.",
+    "Parking Area": "Rows of wheels patiently stay,\nWaiting for journeys at the end of the day. \nKuracheeee kudikooooo. ",
     "Main Gate": "Every story begins right here,\nThe gateway that welcomes all.",
     "Notice Boards": "Messages pinned for all to see,\nNews and updates for you and me.\nFind the place where announcements live."
   },
